@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Sliq",
+            "database": "${workspaceFolder:graphql-api-dotnet}/Api/sliq.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
