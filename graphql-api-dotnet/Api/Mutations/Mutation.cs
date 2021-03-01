@@ -76,7 +76,7 @@ namespace Api.Mutations
         {
             var presentation = context.Presentations.Where(predicate => predicate.Id == id).SingleOrDefault();
 
-            if (presentation == null) return null;
+            if (presentation == null || !presentation.HasStarted) return null;
 
             var updatePresentation = true;
             if (goToNext && presentation.CurrentSlideIndex == presentation.NumberOfSlides - 1) updatePresentation = false;
